@@ -13,9 +13,9 @@
   <link href="{{ url('forntend/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ url('https://fonts.googleapis.com') }}" rel="preconnect">
+  <link href="{{ url('https://fonts.gstatic.com') }}" rel="preconnect" crossorigin>
+  <link href="{{ url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Raleway:wght@400;500;600;700&display=swap') }}" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{ url('frontend/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -32,18 +32,22 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="index" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename">Teaching Problems</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="/" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Diseases</a></li>
+          <li><a href="diseases">Diseases</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
